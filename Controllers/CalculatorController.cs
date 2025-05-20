@@ -10,21 +10,21 @@ namespace CalculatorAPI.Controllers
         public IActionResult Add(decimal num1, decimal num2)
         {
             decimal sum = num1 + num2;
-            return Ok("Your Add total is: "+ sum);
+            return Ok(sum);
         }
 
         [HttpGet("subtract")]
         public IActionResult Subtract(decimal num1, decimal num2)
         {
             decimal difference = num1 - num2;
-            return Ok("Your subtract total is: " +difference);
+            return Ok(difference);
         }
 
         [HttpGet("multiply")]
         public IActionResult Multiply(decimal num1, decimal num2)
         {
             decimal product = num1 * num2;
-            return Ok("Your multiply total is: "+product);
+            return Ok(product);
         }
 
         [HttpGet("divide")]
@@ -46,7 +46,7 @@ namespace CalculatorAPI.Controllers
                 return BadRequest("Cannot perform modulo by zero.");
             }
             decimal remainder = num1 % num2;
-            return Ok("Your Modulo total is: " + remainder);
+            return Ok(remainder);
         }
     }
 }
